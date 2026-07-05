@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ohm Water Supplier - 5000L to 30000L Water Tanker Delivery</title>
+    <meta name="description" content="Ohm Water Supplier provides clean drinking water tanker delivery from 5,000 liters to 30,000 liters. Fast, reliable, and affordable water supply service. Call us now!">
+    <style>
+        :root {
+            --primary: #0284c7;
+            --primary-dark: #0369a1;
+            --primary-light: #38bdf8;
+            --accent: #0ea5e9;
+            --white: #ffffff;
+            --light-bg: #f0f9ff;
+            --dark: #0c1929;
+            --text: #1e293b;
+            --text-light: #64748b;
+            --gradient: linear-gradient(135deg, #0284c7 0%, #38bdf8 50%, #7dd3fc 100%);
+            --gradient-dark: linear-gradient(135deg, #0c1929 0%, #0f2b4a 50%, #0a3d62 100%);
+            --shadow: 0 4px 20px rgba(2, 132, 199, 0.15);
+            --shadow-lg: 0 20px 50px rgba(2, 132, 199, 0.2);
+            --radius: 16px;
+            --radius-sm: 10px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            color: var(--text);
+            background: var(--white);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ========== NAVBAR ========== */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(2, 132, 199, 0.1);
+            transition: var(--transition);
+            padding: 0 20px;
+        }
+        .navbar.scrolled {
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+        }
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 70px;
+        }
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: var(--primary-dark);
+            letter-spacing: -0.5px;
+        }
+        .nav-logo .logo-icon {
+            width: 44px;
+            height: 44px;
+            background: var(--gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            color: white;
+            flex-shrink: 0;
+            box-shadow: 0 4px 12px rgba(2, 132, 199, 0.3);
+        }
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 8px;
+            align-items: center;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 600;
+            padding: 10px 18px;
+            border-radius: 50px;
+            transition: var(--transition);
+            font-size: 0.95rem;
+            white-space: nowrap;
+        }
+        .nav-links a:hover,
+        .nav-links a.active {
+            background: var(--light-bg);
+            color: var(--primary);
+        }
+        .nav-cta {
+            background: var(--gradient) !important;
+            color: white !important;
+            padding: 12px 24px !important;
+            border-radius: 50px !important;
+            font-weight: 700 !important;
+            box-shadow: var(--shadow);
+            animation: pulse-cta 2.5s infinite;
+        }
+        @keyframes pulse-cta {
+            0%,
+            100% {
+                box-shadow: 0 4px 20px rgba(2, 132, 199, 0.3);
+            }
+            50% {
+                box-shadow: 0 8px 35px rgba(2, 132, 199, 0.55);
+            }
+        }
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg) !important;
+            background: var(--gradient-dark) !important;
+        }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            z-index: 1001;
+            background: none;
+            border: none;
+            padding: 8px;
+        }
+        .hamburger span {
+            width: 28px;
+            height: 3px;
+            background: var(--primary-dark);
+            border-radius: 3px;
+            transition: var(--transition);
+        }
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 6px);
+        }
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(6px, -6px);
+        }
+
+        /* ========== HERO ========== */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(160deg, #f0f9ff 0%, #e0f2fe 30%, #ffffff 70%, #f0f9ff 100%);
+            position: relative;
+            overflow: hidden;
+            padding: 100px 20px 60px;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -200px;
+            right: -150px;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(56, 189, 248, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -150px;
+            left: -100px;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(2, 132, 199, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        .hero-content {
+            max-width: 650px;
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+        .hero-badge {
+            display: inline-block;
+            background: var(--light-bg);
+            color: var(--primary);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+            letter-spacing: 0.5px;
+            border: 1px solid rgba(2, 132, 199, 0.2);
+            animation: fadeInUp 0.8s ease;
+        }
+        .hero h1 {
+            font-size: 3.2rem;
+            font-weight: 900;
+            line-height: 1.15;
+            color: var(--dark);
+            margin-bottom: 16px;
+            animation: fadeInUp 0.8s ease 0.15s both;
+            letter-spacing: -1px;
+        }
+        .hero h1 span {
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            margin-bottom: 32px;
+            animation: fadeInUp 0.8s ease 0.3s both;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .hero-buttons {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+            justify-content: center;
+            animation: fadeInUp 0.8s ease 0.45s both;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 28px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1rem;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+            transition: var(--transition);
+            letter-spacing: 0.3px;
+        }
+        .btn-primary {
+            background: var(--gradient);
+            color: white;
+            box-shadow: var(--shadow-lg);
+        }
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 25px 55px rgba(2, 132, 199, 0.35);
+        }
+        .btn-outline {
+            background: white;
+            color: var(--primary);
+            border: 2px solid var(--primary-light);
+        }
+        .btn-outline:hover {
+            background: var(--light-bg);
+            border-color: var(--primary);
+            transform: translateY(-3px);
+        }
+        .hero-visual {
+            position: relative;
+            z-index: 2;
+            animation: fadeInUp 0.8s ease 0.5s both;
+            display: flex;
+            justify-content: center;
+        }
+        .hero-tanker-icon {
+            width: 180px;
+            height: 180px;
+            background: var(--gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            box-shadow: 0 30px 70px rgba(2, 132, 199, 0.3);
+            position: relative;
+            animation: float 4s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ========== SECTION STYLES ========== */
+        .section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .section-badge {
+            display: inline-block;
+            background: var(--light-bg);
+            color: var(--primary);
+            padding: 6px 18px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+            border: 1px solid rgba(2, 132, 199, 0.2);
+        }
+        .section-title {
+            font-size: 2.4rem;
+            font-weight: 900;
+            color: var(--dark);
+            letter-spacing: -0.5px;
+            margin-bottom: 8px;
+        }
+        .section-subtitle {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            max-width: 550px;
+            margin: 0 auto;
+        }
+
+        /* ========== TANKER CARDS ========== */
+        .tankers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+        .tanker-card {
+            background: white;
+            border-radius: var(--radius);
+            padding: 30px 24px;
+            text-align: center;
+            border: 2px solid transparent;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+            cursor: default;
+        }
+        .tanker-card:hover {
+            border-color: var(--primary-light);
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+        .tanker-card.featured {
+            border-color: var(--primary);
+            background: linear-gradient(180deg, #ffffff 0%, #f0f9ff 100%);
+        }
+        .tanker-card.featured::before {
+            content: '🔥 MOST POPULAR';
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            background: var(--gradient);
+            color: white;
+            font-size: 0.7rem;
+            font-weight: 800;
+            padding: 5px 12px;
+            border-radius: 50px;
+            letter-spacing: 0.5px;
+        }
+        .tanker-icon {
+            font-size: 3.5rem;
+            margin-bottom: 14px;
+            display: block;
+        }
+        .tanker-card h3 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--dark);
+            margin-bottom: 4px;
+        }
+        .tanker-capacity {
+            font-size: 2rem;
+            font-weight: 900;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 6px;
+        }
+        .tanker-card p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 16px;
+        }
+        .tanker-card .btn-small {
+            display: inline-block;
+            padding: 10px 22px;
+            background: var(--light-bg);
+            color: var(--primary);
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+        .tanker-card .btn-small:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* ========== WHY US ========== */
+        .why-us {
+            background: var(--gradient-dark);
+            color: white;
+            border-radius: var(--radius);
+            padding: 50px 40px;
+            margin: 0 20px;
+        }
+        .why-us-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+        .why-item .why-icon {
+            font-size: 3rem;
+            margin-bottom: 12px;
+            display: block;
+        }
+        .why-item h4 {
+            font-size: 1.2rem;
+            font-weight: 800;
+            margin-bottom: 6px;
+        }
+        .why-item p {
+            font-size: 0.9rem;
+            opacity: 0.85;
+        }
+
+        /* ========== CONTACT ========== */
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .contact-card {
+            background: white;
+            border-radius: var(--radius-sm);
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+            text-decoration: none;
+            color: inherit;
+        }
+        .contact-card:hover {
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-3px);
+        }
+        .contact-card-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--light-bg);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+        .contact-card h4 {
+            font-weight: 700;
+            margin-bottom: 2px;
+        }
+        .contact-card p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+        .contact-form {
+            background: white;
+            border-radius: var(--radius);
+            padding: 30px;
+            box-shadow: 0 4px 25px rgba(0, 0, 0, 0.06);
+        }
+        .contact-form h3 {
+            font-size: 1.4rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 16px;
+        }
+        .form-group label {
+            display: block;
+            font-weight: 700;
+            margin-bottom: 5px;
+            font-size: 0.9rem;
+            color: var(--text);
+        }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid #e2e8f0;
+            border-radius: var(--radius-sm);
+            font-size: 1rem;
+            font-family: inherit;
+            transition: var(--transition);
+            background: #f8fafc;
+            color: var(--text);
+        }
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-light);
+            box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.15);
+            background: white;
+        }
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        .submit-btn {
+            width: 100%;
+            padding: 14px;
+            background: var(--gradient);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: var(--transition);
+            letter-spacing: 0.3px;
+            box-shadow: var(--shadow);
+        }
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+        .form-success {
+            display: none;
+            text-align: center;
+            padding: 30px;
+            background: #f0fdf4;
+            border-radius: var(--radius-sm);
+            border: 2px solid #22c55e;
+            color: #166534;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+        .form-success.show {
+            display: block;
+        }
+
+        /* ========== FOOTER ========== */
+        .footer {
+            background: var(--dark);
+            color: white;
+            padding: 40px 20px 20px;
+            text-align: center;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .footer h3 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+        .footer p {
+            opacity: 0.75;
+            margin-bottom: 4px;
+        }
+        .footer-bottom {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            font-size: 0.85rem;
+            opacity: 0.6;
+        }
+
+        /* ========== WHATSAPP FLOAT ========== */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 999;
+            width: 58px;
+            height: 58px;
+            background: #25d366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4);
+            text-decoration: none;
+            transition: var(--transition);
+            animation: bounce-wa 3s infinite;
+        }
+        @keyframes bounce-wa {
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 12px 40px rgba(37, 211, 102, 0.55);
+        }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 900px) {
+            .contact-wrapper {
+                grid-template-columns: 1fr;
+            }
+            .hero h1 {
+                font-size: 2.3rem;
+            }
+            .section-title {
+                font-size: 1.8rem;
+            }
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 280px;
+                height: 100vh;
+                background: white;
+                flex-direction: column;
+                padding: 100px 30px 30px;
+                gap: 6px;
+                box-shadow: -10px 0 40px rgba(0, 0, 0, 0.15);
+                transition: var(--transition);
+                z-index: 1000;
+            }
+            .nav-links.active {
+                right: 0;
+            }
+            .nav-links a {
+                display: block;
+                padding: 14px 18px;
+                font-size: 1rem;
+            }
+            .hamburger {
+                display: flex;
+            }
+            .hero-tanker-icon {
+                width: 130px;
+                height: 130px;
+                font-size: 3.5rem;
+            }
+            .tankers-grid {
+                grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            }
+            .why-us {
+                margin: 0 10px;
+                padding: 30px 20px;
+            }
+        }
+        @media (max-width: 500px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+            .btn {
+                padding: 12px 20px;
+                font-size: 0.9rem;
+            }
+            .section {
+                padding: 50px 14px;
+            }
+            .section-title {
+                font-size: 1.5rem;
+            }
+            .contact-form {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ==================== NAVBAR ==================== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <div class="logo-icon">💧</div>
+                Ohm Water Supplier
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="active" data-nav="home">Home</a></li>
+                <li><a href="#tankers" data-nav="tankers">Tanker Sizes</a></li>
+                <li><a href="#why-us" data-nav="why-us">Why Us</a></li>
+                <li><a href="#contact" data-nav="contact">Contact</a></li>
+                <li><a href="tel:+919XXXXXXXXX" class="nav-cta">📞 Call Now</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ==================== HERO ==================== -->
+    <section class="hero" id="home">
+        <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 40px; max-width: 1200px; width: 100%;">
+            <div class="hero-content">
+                <div class="hero-badge">🚛 Trusted Water Tanker Supplier</div>
+                <h1>Clean Water Delivered <span>Fast & Reliable</span></h1>
+                <p>From <strong>5,000 Liters</strong> to <strong>30,000 Liters</strong> — we supply fresh drinking water tankers for homes, events, construction, and industries.</p>
+                <div class="hero-buttons">
+                    <a href="#tankers" class="btn btn-primary">🚚 View Tanker Sizes</a>
+                    <a href="tel:+919XXXXXXXXX" class="btn btn-outline">📞 Call Us Now</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-tanker-icon">🚛</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== TANKER SIZES ==================== -->
+    <section class="section" id="tankers">
+        <div class="section-header">
+            <div class="section-badge">💧 Our Tanker Fleet</div>
+            <h2 class="section-title">Water Tanker Sizes We Offer</h2>
+            <p class="section-subtitle">Choose the right capacity for your needs. All tankers deliver clean, safe drinking water.</p>
+        </div>
+        <div class="tankers-grid">
+            <!-- 5000L -->
+            <div class="tanker-card">
+                <span class="tanker-icon">🪣</span>
+                <h3>Small Tanker</h3>
+                <div class="tanker-capacity">5,000 L</div>
+                <p>Perfect for small homes, shops, and short-term needs. Quick delivery.</p>
+                <a href="#contact" class="btn-small">Book Now →</a>
+            </div>
+            <!-- 10000L -->
+            <div class="tanker-card featured">
+                <span class="tanker-icon">🚿</span>
+                <h3>Standard Tanker</h3>
+                <div class="tanker-capacity">10,000 L</div>
+                <p>Ideal for apartments, medium events, and weekly refills. Most popular choice!</p>
+                <a href="#contact" class="btn-small">Book Now →</a>
+            </div>
+            <!-- 15000L -->
+            <div class="tanker-card">
+                <span class="tanker-icon">🚛</span>
+                <h3>Large Tanker</h3>
+                <div class="tanker-capacity">15,000 L</div>
+                <p>Great for societies, construction sites, and large family gatherings.</p>
+                <a href="#contact" class="btn-small">Book Now →</a>
+            </div>
+            <!-- 20000L -->
+            <div class="tanker-card">
+                <span class="tanker-icon">🏗️</span>
+                <h3>XL Tanker</h3>
+                <div class="tanker-capacity">20,000 L</div>
+                <p>Bulk supply for industries, large construction projects, and commercial use.</p>
+                <a href="#contact" class="btn-small">Book Now →</a>
+            </div>
+            <!-- 25000L -->
+            <div class="tanker-card">
+                <span class="tanker-icon">🏭</span>
+                <h3>XXL Tanker</h3>
+                <div class="tanker-capacity">25,000 L</div>
+                <p>Heavy-duty supply for factories, warehouses, and large-scale operations.</p>
+                <a href="#contact" class="btn-small">Book Now →</a>
+            </div>
+            <!-- 30000L -->
+            <div class="tanker-card featured">
+                <span class="tanker-icon">🚛💨</span>
+                <h3>Jumbo Tanker</h3>
+                <div class="tanker-capacity">30,000 L</div>
+                <p>Maximum capacity for mega projects, townships, and emergency bulk supply.</p>
+                <a href="#contact" class="btn-small">Book Now →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== WHY US ==================== -->
+    <div class="section" id="why-us" style="padding: 0 20px;">
+        <div class="why-us">
+            <div class="section-header" style="margin-bottom: 36px;">
+                <div class="section-badge" style="background: rgba(255,255,255,0.15); color: white; border-color: rgba(255,255,255,0.3);">⭐ Why Choose Us</div>
+                <h2 class="section-title" style="color: white;">What Makes Ohm Water Supplier Different</h2>
+                <p class="section-subtitle" style="color: rgba(255,255,255,0.8);">We prioritize quality, speed, and customer satisfaction above everything else.</p>
+            </div>
+            <div class="why-us-grid">
+                <div class="why-item">
+                    <span class="why-icon">✅</span>
+                    <h4>100% Clean Water</h4>
+                    <p>All water is sourced from trusted, tested, and safe drinking water sources.</p>
+                </div>
+                <div class="why-item">
+                    <span class="why-icon">⚡</span>
+                    <h4>Fast Delivery</h4>
+                    <p>We deliver within hours of your order. Same-day delivery available in most areas.</p>
+                </div>
+                <div class="why-item">
+                    <span class="why-icon">💰</span>
+                    <h4>Affordable Rates</h4>
+                    <p>Competitive pricing with no hidden charges. Best value for your money guaranteed.</p>
+                </div>
+                <div class="why-item">
+                    <span class="why-icon">📅</span>
+                    <h4>24/7 Availability</h4>
+                    <p>We operate round the clock. Emergency orders are always welcome — day or night.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== CONTACT ==================== -->
+    <section class="section" id="contact">
+        <div class="section-header">
+            <div class="section-badge">📞 Get In Touch</div>
+            <h2 class="section-title">Book Your Water Tanker</h2>
+            <p class="section-subtitle">Fill the form below or call us directly. We'll get back to you within minutes!</p>
+        </div>
+        <div class="contact-wrapper">
+            <!-- Contact Info Cards -->
+            <div class="contact-info">
+                <a href="tel:+919XXXXXXXXX" class="contact-card">
+                    <div class="contact-card-icon">📞</div>
+                    <div>
+                        <h4>Call Us</h4>
+                        <p>+91 9XXX XXX XXX</p>
+                    </div>
+                </a>
+                <a href="mailto:ohmwatersupplier@gmail.com" class="contact-card">
+                    <div class="contact-card-icon">📧</div>
+                    <div>
+                        <h4>Email Us</h4>
+                        <p>ohmwatersupplier@gmail.com</p>
+                    </div>
+                </a>
+                <a href="https://wa.me/919XXXXXXXXX" target="_blank" rel="noopener" class="contact-card">
+                    <div class="contact-card-icon">💬</div>
+                    <div>
+                        <h4>WhatsApp</h4>
+                        <p>Chat with us instantly</p>
+                    </div>
+                </a>
+                <div class="contact-card">
+                    <div class="contact-card-icon">📍</div>
+                    <div>
+                        <h4>Service Area</h4>
+                        <p>Citywide & Nearby Areas</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Booking Form -->
+            <div class="contact-form" id="contactForm">
+                <h3>🚚 Request a Tanker</h3>
+                <form id="bookingForm">
+                    <div class="form-group">
+                        <label for="name">Your Name *</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="tankerSize">Select Tanker Size *</label>
+                        <select id="tankerSize" name="tankerSize" required>
+                            <option value="">-- Choose Capacity --</option>
+                            <option value="5000">5,000 Liters</option>
+                            <option value="10000">10,000 Liters</option>
+                            <option value="15000">15,000 Liters</option>
+                            <option value="20000">20,000 Liters</option>
+                            <option value="25000">25,000 Liters</option>
+                            <option value="30000">30,000 Liters</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Delivery Address *</label>
+                        <textarea id="address" name="address" placeholder="Enter full delivery address" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">📩 Send Booking Request</button>
+                </form>
+                <div class="form-success" id="formSuccess">
+                    ✅ <strong>Booking Request Sent!</strong><br>
+                    <small>We will call you back shortly to confirm your order. Thank you for choosing Ohm Water Supplier!</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="footer-content">
+            <h3>💧 Ohm Water Supplier</h3>
+            <p>Your trusted partner for water tanker delivery — 5,000L to 30,000L</p>
+            <p>📞 +91 9XXX XXX XXX | 📧 ohmwatersupplier@gmail.com</p>
+            <div class="footer-bottom">
+                &copy; <span id="currentYear"></span> Ohm Water Supplier. All rights reserved. | Clean Water, Delivered With Care.
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== WHATSAPP FLOAT ==================== -->
+    <a href="https://wa.me/919XXXXXXXXX" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp" title="Chat on WhatsApp">💬</a>
+
+    <!-- ==================== SCRIPTS ==================== -->
+    <script>
+        // Set current year
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+
+            // Active nav link update
+            const sections = document.querySelectorAll('section, .why-us');
+            const navLinks = document.querySelectorAll('.nav-links a[data-nav]');
+            let current = 'home';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 120;
+                if (window.scrollY >= sectionTop) {
+                    current = section.getAttribute('id') || 'why-us';
+                }
+            });
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('data-nav') === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Hamburger menu
+        const hamburger = document.getElementById('hamburger');
+        const navLinksContainer = document.getElementById('navLinks');
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinksContainer.classList.toggle('active');
+        });
+
+        // Close menu on link click
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinksContainer.classList.remove('active');
+            });
+        });
+
+        // Form submission handling
+        const bookingForm = document.getElementById('bookingForm');
+        const formSuccess = document.getElementById('formSuccess');
+        const contactFormDiv = document.getElementById('contactForm');
+
+        bookingForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Get form values
+            const name = document.getElementById('name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const tankerSize = document.getElementById('tankerSize').value;
+            const address = document.getElementById('address').value.trim();
+
+            if (!name || !phone || !tankerSize || !address) {
+                alert('Please fill all required fields.');
+                return;
+            }
+
+            // Simulate submission (in production, connect to a backend or Formspree)
+            // For now, show success message
+            bookingForm.style.display = 'none';
+            formSuccess.classList.add('show');
+
+            // Log the booking (for demo purposes)
+            console.log('📋 New Booking Request:', {
+                name,
+                phone,
+                tankerSize: tankerSize + ' Liters',
+                address,
+                timestamp: new Date().toISOString()
+            });
+
+            // Reset form after 5 seconds
+            setTimeout(() => {
+                bookingForm.style.display = 'block';
+                formSuccess.classList.remove('show');
+                bookingForm.reset();
+            }, 5000);
+        });
+
+        // Smooth scroll for all anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href === '#') return;
+                const target = document.querySelector(href);
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        console.log('💧 Ohm Water Supplier - Website Ready!');
+        console.log('🚛 Tanker Sizes: 5,000L | 10,000L | 15,000L | 20,000L | 25,000L | 30,000L');
+        console.log('📞 Update phone numbers in the HTML to your actual number.');
+        console.log('📧 Update email address to your actual email.');
+    </script>
+</body>
+</html>
